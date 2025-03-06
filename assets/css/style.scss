@@ -3,65 +3,87 @@
 
 @import "{{ site.theme }}";
 
-// Monochrome code highlighting
+// Clean up code blocks
+pre.highlight, .highlight pre, pre.rouge-code {
+  background-color: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 16px;
+  overflow: auto;
+  margin-bottom: 16px;
+  box-shadow: none;
+}
+
+// Remove unwanted containers
+div.highlight, figure.highlight {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+// Line numbers
+.highlight .lineno {
+  color: #999;
+  display: inline-block;
+  padding: 0 5px;
+  border-right: 1px solid #ddd;
+  text-align: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Remove additional wrappers
+.code-wrapper, .gist-data, .gist-file, .highlight-rouge {
+  border: none !important;
+  background: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Monochrome syntax highlighting
 .highlight {
-  pre {
-    background-color: #f8f8f8;
-    padding: 16px;
-    border-radius: 4px;
-    overflow: auto;
-    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .lineno { 
-    color: #999;
-    margin-right: 15px;
-    padding-right: 5px;
-    border-right: 1px solid #ddd;
-  }
-  
   .c, .c1, .cm, .cs, .cp { color: #666; font-style: italic; } /* Comments */
-  .k, .kd, .kn, .kt       { color: #333; font-weight: bold; } /* Keywords */
-  .nb, .nf, .nc, .o       { color: #444; } /* Functions, Classes, Operators */
-  .nv, .nx                { color: #555; } /* Variables */
-  .s, .s1, .s2            { color: #555; } /* Strings */
-  .mi, .mf, .mo           { color: #444; } /* Numbers */
-  .p                      { color: #666; } /* Punctuation */
+  .k, .kd, .kn, .kt { color: #333; font-weight: bold; } /* Keywords */
+  .nb, .nf, .nc { color: #444; font-weight: bold; } /* Functions, Classes */
+  .o, .ow { color: #000; } /* Operators */
+  .s, .s1, .s2, .sr, .se { color: #555; } /* Strings */
+  .mi, .mf, .mo, .mb, .mx { color: #444; } /* Numbers */
+  .nx, .na, .no, .ni { color: #555; } /* Variables/properties */
+  .p { color: #666; } /* Punctuation */
+  .gd, .gi { color: #000; } /* Git diff */
+  .w { color: #bbb; } /* Whitespace */
+  .err { color: #000; background-color: #fdd; } /* Error */
   
-  // Swift-specific syntax
-  .language-swift {
-    .kd { color: #222; } /* Swift Keywords */
-    .kt { color: #444; } /* Swift Types */
-    .nf { color: #333; font-weight: bold; } /* Swift Functions */
-    .nc { color: #333; } /* Swift Classes */
+  /* Ensure all other tokens have consistent styling */
+  * {
+    color: #444 !important;
+    background: none !important;
+    border: none !important;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  /* Exception for keywords and function names */
+  .kd, .kt, .nf, .nc {
+    font-weight: bold !important;  
+  }
+  
+  /* Exception for comments */
+  .c, .c1, .cm, .cs, .cp {
+    font-style: italic !important;
   }
 }
 
-// Slide layout
-h1, h2 {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-  margin-top: 40px;
-}
-
-hr {
-  height: 3px;
-  background-color: #ccc;
-  margin: 40px 0;
-}
-
-// Better readability
-body {
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+// Fix code tables and overflow
+table pre, table code {
+  white-space: pre;
+  word-break: normal;
+  overflow-x: auto;
 }
