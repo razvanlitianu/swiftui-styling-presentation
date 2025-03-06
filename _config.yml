@@ -1,0 +1,10 @@
+title: SwiftUI Styling Approaches
+description: From "Big Head" to "Long Tail"
+theme: jekyll-theme-cayman
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
