@@ -1,16 +1,9 @@
 title: SwiftUI Styling Approaches
 description: From "Big Head" to "Long Tail"
-theme: jekyll-theme-minimal
+theme: jekyll-theme-primer
 markdown: kramdown
-
 kramdown:
   syntax_highlighter: rouge
   input: GFM
-  syntax_highlighter_opts:
-    default_lang: swift
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+  hard_wrap: false
+highlighter: rouge
