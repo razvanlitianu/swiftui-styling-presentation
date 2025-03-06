@@ -3,116 +3,84 @@
 
 @import "{{ site.theme }}";
 
-// Clean up code blocks
-pre.highlight, .highlight pre, pre.rouge-code {
-  background-color: #f8f8f8;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 16px;
-  overflow: auto;
-  margin-bottom: 16px;
-  box-shadow: none;
-}
-
-// Remove unwanted containers
-div.highlight, figure.highlight {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: none;
-  box-shadow: none;
-}
-
-// Line numbers
-.highlight .lineno {
-  color: #999;
-  display: inline-block;
-  padding: 0 5px;
-  border-right: 1px solid #ddd;
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-// Remove additional wrappers
-.code-wrapper, .gist-data, .gist-file, .highlight-rouge {
-  border: none !important;
-  background: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-// Colorful syntax highlighting for Swift
+/* Xcode-inspired syntax highlighting */
 .highlight {
-  // Keywords
-  .k, .kd, .kt {
-    color: #A90D91;
-    font-weight: bold;
-  }
-  
-  // Strings
-  .s, .s1, .s2, .sr, .se {
-    color: #C41A16;
-  }
-  
-  // Numbers
-  .mi, .mf, .mo, .mb, .mx {
-    color: #1C00CF;
-  }
-  
-  // Comments
-  .c, .c1, .cm, .cs, .cp {
-    color: #007400;
-    font-style: italic;
-  }
-  
-  // Functions and method names
-  .nf {
-    color: #326D74;
-    font-weight: bold;
-  }
-  
-  // Class and type names
-  .nc, .nl {
-    color: #3F6E75;
-  }
-  
-  // Variables and properties
-  .nx, .n {
-    color: #000000;
-  }
-  
-  // Punctuation
-  .p {
-    color: #000000;
-  }
-  
-  // Operators
-  .o, .ow {
-    color: #000000;
-  }
-  
-  // Swift specific types
-  .bp, .nb {
-    color: #0B4F79; // Built-in types
-  }
-  
-  // SwiftUI specific
-  .nx[data-text="View"],
-  .nx[data-text="Image"],
-  .nx[data-text="Color"] {
-    color: #0B4F79;
-  }
+  color: #000000;
+  background-color: #ffffff;
 }
 
-// Fix code tables and overflow
-table pre, table code {
-  white-space: pre;
-  word-break: normal;
-  overflow-x: auto;
+/* Keywords */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt {
+  color: #A90D91;  /* Purple */
+}
+
+/* Strings */
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, 
+.highlight .sh, .highlight .sx, .highlight .s1, .highlight .ss {
+  color: #C41A16;  /* Red */
+}
+
+/* String interpolation */
+.highlight .si, .highlight .se {
+  color: #9C2800;  /* Darker red for string interpolation */
+}
+
+/* Numbers */
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo {
+  color: #1C00CF;  /* Blue */
+}
+
+/* Comments */
+.highlight .c, .highlight .ch, .highlight .cm, .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #177500;  /* Green */
+  font-style: italic;
+}
+
+/* Types */
+.highlight .nc, .highlight .nt, .highlight .nl {
+  color: #3F6E75;  /* Teal */
+}
+
+/* Functions and methods */
+.highlight .nf, .highlight .fm {
+  color: #326D74;  /* Teal-blue */
+}
+
+/* Built-in functions and types */
+.highlight .nb, .highlight .bp {
+  color: #5B269A;  /* Purple-blue */
+}
+
+/* Self keyword */
+.highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
+  color: #A90D91;  /* Same as keywords */
+}
+
+/* Attributes and preprocessor directives */
+.highlight .na, .highlight .nd {
+  color: #836C28;  /* Dark gold */
+}
+
+/* Operators */
+.highlight .o, .highlight .ow {
+  color: #000000;  /* Black */
+}
+
+/* Regular identifiers */
+.highlight .n, .highlight .nx, .highlight .py, .highlight .ni {
+  color: #000000;  /* Black */
+}
+
+/* Punctuation */
+.highlight .p {
+  color: #000000;  /* Black */
+}
+
+/* Make the code background cleaner */
+pre.highlight, .highlight pre, code.highlight {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  padding: 15px;
+  overflow: auto;
 }
