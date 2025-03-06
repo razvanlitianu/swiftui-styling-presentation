@@ -47,37 +47,66 @@ div.highlight, figure.highlight {
   padding: 0 !important;
 }
 
-// Monochrome syntax highlighting
+// Colorful syntax highlighting for Swift
 .highlight {
-  .c, .c1, .cm, .cs, .cp { color: #666; font-style: italic; } /* Comments */
-  .k, .kd, .kn, .kt { color: #333; font-weight: bold; } /* Keywords */
-  .nb, .nf, .nc { color: #444; font-weight: bold; } /* Functions, Classes */
-  .o, .ow { color: #000; } /* Operators */
-  .s, .s1, .s2, .sr, .se { color: #555; } /* Strings */
-  .mi, .mf, .mo, .mb, .mx { color: #444; } /* Numbers */
-  .nx, .na, .no, .ni { color: #555; } /* Variables/properties */
-  .p { color: #666; } /* Punctuation */
-  .gd, .gi { color: #000; } /* Git diff */
-  .w { color: #bbb; } /* Whitespace */
-  .err { color: #000; background-color: #fdd; } /* Error */
-  
-  /* Ensure all other tokens have consistent styling */
-  * {
-    color: #444 !important;
-    background: none !important;
-    border: none !important;
-    font-style: normal;
-    font-weight: normal;
+  // Keywords
+  .k, .kd, .kt {
+    color: #A90D91;
+    font-weight: bold;
   }
   
-  /* Exception for keywords and function names */
-  .kd, .kt, .nf, .nc {
-    font-weight: bold !important;  
+  // Strings
+  .s, .s1, .s2, .sr, .se {
+    color: #C41A16;
   }
   
-  /* Exception for comments */
+  // Numbers
+  .mi, .mf, .mo, .mb, .mx {
+    color: #1C00CF;
+  }
+  
+  // Comments
   .c, .c1, .cm, .cs, .cp {
-    font-style: italic !important;
+    color: #007400;
+    font-style: italic;
+  }
+  
+  // Functions and method names
+  .nf {
+    color: #326D74;
+    font-weight: bold;
+  }
+  
+  // Class and type names
+  .nc, .nl {
+    color: #3F6E75;
+  }
+  
+  // Variables and properties
+  .nx, .n {
+    color: #000000;
+  }
+  
+  // Punctuation
+  .p {
+    color: #000000;
+  }
+  
+  // Operators
+  .o, .ow {
+    color: #000000;
+  }
+  
+  // Swift specific types
+  .bp, .nb {
+    color: #0B4F79; // Built-in types
+  }
+  
+  // SwiftUI specific
+  .nx[data-text="View"],
+  .nx[data-text="Image"],
+  .nx[data-text="Color"] {
+    color: #0B4F79;
   }
 }
 
