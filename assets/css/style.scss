@@ -1,0 +1,67 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Monochrome code highlighting
+.highlight {
+  pre {
+    background-color: #f8f8f8;
+    padding: 16px;
+    border-radius: 4px;
+    overflow: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .lineno { 
+    color: #999;
+    margin-right: 15px;
+    padding-right: 5px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .c, .c1, .cm, .cs, .cp { color: #666; font-style: italic; } /* Comments */
+  .k, .kd, .kn, .kt       { color: #333; font-weight: bold; } /* Keywords */
+  .nb, .nf, .nc, .o       { color: #444; } /* Functions, Classes, Operators */
+  .nv, .nx                { color: #555; } /* Variables */
+  .s, .s1, .s2            { color: #555; } /* Strings */
+  .mi, .mf, .mo           { color: #444; } /* Numbers */
+  .p                      { color: #666; } /* Punctuation */
+  
+  // Swift-specific syntax
+  .language-swift {
+    .kd { color: #222; } /* Swift Keywords */
+    .kt { color: #444; } /* Swift Types */
+    .nf { color: #333; font-weight: bold; } /* Swift Functions */
+    .nc { color: #333; } /* Swift Classes */
+  }
+}
+
+// Slide layout
+h1, h2 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+hr {
+  height: 3px;
+  background-color: #ccc;
+  margin: 40px 0;
+}
+
+// Better readability
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
