@@ -3,84 +3,34 @@
 
 @import "{{ site.theme }}";
 
-/* Xcode-inspired syntax highlighting */
-.highlight {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-/* Keywords */
-.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt {
-  color: #A90D91;  /* Purple */
-}
-
-/* Strings */
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, 
-.highlight .sh, .highlight .sx, .highlight .s1, .highlight .ss {
-  color: #C41A16;  /* Red */
-}
-
-/* String interpolation */
-.highlight .si, .highlight .se {
-  color: #9C2800;  /* Darker red for string interpolation */
-}
-
-/* Numbers */
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo {
-  color: #1C00CF;  /* Blue */
-}
-
-/* Comments */
-.highlight .c, .highlight .ch, .highlight .cm, .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #177500;  /* Green */
-  font-style: italic;
-}
-
-/* Types */
-.highlight .nc, .highlight .nt, .highlight .nl {
-  color: #3F6E75;  /* Teal */
-}
-
-/* Functions and methods */
-.highlight .nf, .highlight .fm {
-  color: #326D74;  /* Teal-blue */
-}
-
-/* Built-in functions and types */
-.highlight .nb, .highlight .bp {
-  color: #5B269A;  /* Purple-blue */
-}
-
-/* Self keyword */
-.highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
-  color: #A90D91;  /* Same as keywords */
-}
-
-/* Attributes and preprocessor directives */
-.highlight .na, .highlight .nd {
-  color: #836C28;  /* Dark gold */
-}
-
-/* Operators */
-.highlight .o, .highlight .ow {
-  color: #000000;  /* Black */
-}
-
-/* Regular identifiers */
-.highlight .n, .highlight .nx, .highlight .py, .highlight .ni {
-  color: #000000;  /* Black */
-}
-
-/* Punctuation */
-.highlight .p {
-  color: #000000;  /* Black */
-}
+/* Use GitHub's default syntax highlighting colors */
+/* We don't need to specify all the colors explicitly since we're using the default */
 
 /* Make the code background cleaner */
 pre.highlight, .highlight pre, code.highlight {
-  background: #FFFFFF;
-  border: 1px solid #E0E0E0;
-  border-radius: 3px;
-  padding: 15px;
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
   overflow: auto;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 85%;
+  line-height: 1.45;
+}
+
+/* Remove unwanted containers */
+div.highlight, figure.highlight {
+  margin: 0 0 16px 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Line numbers if present */
+.highlight .lineno {
+  color: #6a737d;
+  display: inline-block;
+  padding: 0 5px;
+  border-right: 1px solid #e1e4e8;
+  text-align: right;
+  user-select: none;
 }
